@@ -6,11 +6,11 @@ import { Card, IconButton, OverlayLabel } from './components'
 import styles from './App.styles'
 
 const App = () => {
-  const useSwiper = useRef(null).current
+  const useSwiper = useRef(null)
 
-  const handleOnSwipedLeft = () => useSwiper.swipeLeft()
-  const handleOnSwipedTop = () => useSwiper.swipeTop()
-  const handleOnSwipedRight = () => useSwiper.swipeRight()
+  const handleOnSwipedLeft = () => useSwiper.current.swipeLeft()
+  const handleOnSwipedTop = () => useSwiper.current.swipeTop()
+  const handleOnSwipedRight = () => useSwiper.current.swipeRight()
 
   return (
     <View
